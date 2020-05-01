@@ -23,21 +23,22 @@ However, maintaining long lists of such abbreviations clutter your `config.fish`
 Not too bad, but could be better. This plugin lets you do the same via a `~/.config/fish/abbrfile`:
 
 	# Version control.
-	g:  git
-	ga: git add
-	gc: git commit
-	gd: git diff
-	gf: git fetch
-	gp: git push
-	gs: git status
+	g   git
+	ga  git add
+	gc  git commit
+	gd  git diff
+	gf  git fetch
+	gp  git push
+	gs  git status
 	
 	# Package management.
-	a:  sudo apt
-	ai: sudo apt install
-	ar: sudo apt autoremove
-	as: apt search
-	ah: apt help
+	a   sudo apt
+	ai  sudo apt install
+	ar  sudo apt autoremove
+	as  apt search
+	ah  apt help
 
+You can have any number of spaces (but not tabs) between abbreviations and expansions.
 Personally, I find this approach easier to maintain across machines than dealing with
 "universal variables", and cleaner than maintaining lists of `abbr` commands. If you
 agree, this plugin is easily installable via [`fisher`][1]:
