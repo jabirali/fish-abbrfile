@@ -20,8 +20,7 @@ However, maintaining long lists of such abbreviations clutter your `config.fish`
 	abbr -ga 'as' 'apt search'
 	abbr -ga 'ah' 'apt help'
 
-It's not too bad, but it could be better. This plugin lets you accomplish the
-same by instead maintaining a `~/.config/fish/abbrfile` with the following format:
+Not too bad, but could be better. This plugin lets you do the same via a `~/.config/fish/abbrfile`:
 
 	# Version control.
 	g:  git
@@ -39,8 +38,9 @@ same by instead maintaining a `~/.config/fish/abbrfile` with the following forma
 	as: apt search
 	ah: apt help
 
-Personally, I like this approach better than "universal variables", and cleaner
-than lists of `abbr` commands. If you agree, this is available via [`fisher`][1]:
+Personally, I find this approach easier to maintain across machines than dealing with
+"universal variables", and cleaner than maintaining lists of `abbr` commands. If you
+agree, this plugin is easily installable via [`fisher`][1]:
 
 	fisher add jabirali/fish-abbrfile
 
