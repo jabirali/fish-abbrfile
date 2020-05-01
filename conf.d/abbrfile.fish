@@ -8,7 +8,7 @@ if [ -f ~/.config/fish/abbrfile ]
 			set -l key (string trim $dict[1])
 			set -l val (string trim (string join : $dict[2..-1]))
 			abbr -ga $key $val
-		else
+		else if [ -n "$line" ]
 			echo "abbrfile: Could not parse \"$line\"."
 		end
 	end
