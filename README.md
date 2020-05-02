@@ -40,8 +40,9 @@ Not too bad, but could be better. This plugin lets you do the same via a `~/.con
 
 You can have any number of spaces (but not tabs) between abbreviations and expansions.
 Personally, I find this approach easier to maintain across machines than dealing with
-"universal variables", and cleaner than maintaining lists of `abbr` commands. If you
-agree, this plugin is easily installable via [`fisher`][1]:
+"universal variables", and cleaner than maintaining lists of `abbr` commands.
+
+If you agree, this plugin is easily installable via [`fisher`][1]:
 
 	fisher add jabirali/fish-abbrfile
 
