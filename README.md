@@ -44,9 +44,9 @@ performing an abbreviation: so if you write the following in your `abbrfile`,
     cat   bat -p
 
 then e.g. `find` will only be autocorrected to `fd` on systems where `fd` is
-installed. You can even add multiple entries with the same name; in the
-following example, the plugin prefers the editor `nvim` over `vim`, and
-`vim` over `vi`, but resorts to `vi` when that's the only thing available:
+installed. You can add multiple entries with the same name; in the following
+example, the plugin prefers the editor `nvim` over `vim`, and `vim` over `vi`,
+but resorts to `vi` when that's the only available:
 
     # Better editors.
     vi    vim
