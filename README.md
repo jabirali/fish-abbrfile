@@ -30,7 +30,7 @@ If you agree, this plugin is easily installable via [`fisher`][1]:
 
 ## Advanced usage
 Another common usecase for abbreviations is that you want to autocorrect UNIX
-commands like `ls`, `cat`, `find`, `grep` to modern replacements like [`exa`][2],
+commands like `ls`, `find`, `grep`, `cat` to modern replacements like [`exa`][2],
 [`fd`][3], [`rg`][4], and [`bat`][5]. These are faster, smarter, and prettier
 than their classic counterparts. But they may not be available on *every* machine
 you check your dotfiles into, so such autocorrection can get in the way on many
@@ -38,20 +38,19 @@ systems. This plugin solves that my checking that a command is valid before
 performing an abbreviation: so if you write the following in your `abbrfile`,
 
     # Better coreutils.
-    cat   bat -p
+    ls    exa
     find  fd
     grep  rg
-    ls    exa
+    cat   bat -p
 
 then e.g. `find` will only be autocorrected to `fd` on systems where `fd` is
-installed. Convenient. You can even add multiple entries with the same name;
-in the following example, the plugin prefers the editor `nvim` over `vim`, and
+installed. You can even add multiple entries with the same name; in the
+following example, the plugin prefers the editor `nvim` over `vim`, and
 `vim` over `vi`, but resorts to `vi` when that's the only thing available:
 
     # Better editors.
     vi    vim
     vi    nvim
-
 
 [1]: https://github.com/jorgebucaran/fisher
 [2]: https://the.exa.website/
