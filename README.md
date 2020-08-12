@@ -30,7 +30,7 @@ If you agree, this plugin is easily installable via [`fisher`][1]:
 
 ## Advanced usage
 Another common usecase for abbreviations is that you want to autocorrect UNIX
-commands like `ls`, `cat`, `find`, grep` to modern replacements like [`exa`][2],
+commands like `ls`, `cat`, `find`, `grep` to modern replacements like [`exa`][2],
 [`fd`][3], [`rg`][4], and [`bat`][5]. These are faster, smarter, and prettier
 than their classic counterparts. But they may not be available on *every* machine
 you check your dotfiles into, so such autocorrection can get in the way on many
