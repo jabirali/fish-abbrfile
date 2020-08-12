@@ -13,8 +13,16 @@ if [ -f ~/.config/fish/abbrfile ]
       # possible to e.g. abbreviate `vi` to `vim` on systems where `vim`
       # is available, but use the real `vi` if `vim` is not installed.
       set -l cmd (string split --no-empty ' ' -- $val)
-      if [ (command -v $cmd[1]) ]
-		    abbr -ga $key $val
+      if [ $cmd[1] = "sudo" ]
+        # Sudo detected. Check the next argument to see how to proceed.
+        if [ (command -v $cmd[2]) ]
+          abbr -ga $key $val
+        end
+      else
+        # Sudo not detected. Just check the first argument of the command.
+        if [ (command -v $cmd[1]) ]
+          abbr -ga $key $val
+        end
       end
 		else if [ -n "$line" ]
 			echo "abbrfile: Could not parse \"$line\"."

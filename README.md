@@ -52,6 +52,16 @@ following example, the plugin prefers the editor `nvim` over `vim`, and
     vi    vim
     vi    nvim
 
+Note that the plugin also understands basic `sudo` usage; if it detects `sudo`,
+it will use the next argument to check whether the command is installed. Thus,
+if you e.g. want to type `pkg install` across Manjaro Linux (`sudo pamac install`),
+Ubuntu Linux (`sudo apt install`), and macOS (`brew install`), this should work:
+
+    # Package manager.
+    pkg   sudo apt
+    pkg   sudo pamac
+    pkg   brew
+
 [1]: https://github.com/jorgebucaran/fisher
 [2]: https://the.exa.website/
 [3]: https://github.com/sharkdp/fd
