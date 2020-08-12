@@ -16,11 +16,11 @@ However, maintaining long lists of such abbreviations clutter your `config.fish`
 	# Package management.
 	abbr -ga 'a'  'sudo apt'
 	abbr -ga 'ai' 'sudo apt install'
-	abbr -ga 'ar' 'sudo apt autoremove'
+	abbr -ga 'ar' 'sudo apt autoremove --purge'
 	abbr -ga 'as' 'apt search'
 	abbr -ga 'ah' 'apt help'
 
-Not too bad, but could be better. This plugin lets you do the same via a `~/.config/fish/abbrfile`:
+Not too bad. Could be better. This plugin lets you do the same via `~/.config/fish/abbrfile`:
 
 	# Version control.
 	g   git
@@ -34,13 +34,13 @@ Not too bad, but could be better. This plugin lets you do the same via a `~/.con
 	# Package management.
 	a   sudo apt
 	ai  sudo apt install
-	ar  sudo apt autoremove
+	ar  sudo apt autoremove --purge
 	as  apt search
 	ah  apt help
 
 You can have any number of spaces (but not tabs) between abbreviations and expansions.
 Personally, I find this approach easier to maintain across machines than dealing with
-"universal variables", and cleaner than maintaining lists of `abbr` commands.
+"universal variables", and much cleaner than maintaining lists of `abbr` commands.
 
 If you agree, this plugin is easily installable via [`fisher`][1]:
 
