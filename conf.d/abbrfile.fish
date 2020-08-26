@@ -15,12 +15,12 @@ if [ -f ~/.config/fish/abbrfile ]
       set -l cmd (string split --no-empty ' ' -- $val)
       if [ $cmd[1] = "sudo" ]
         # Sudo detected. Check the next argument to see how to proceed.
-        if [ (command -v $cmd[2]) ]
+        if type -q $cmd[2]
           abbr -ga $key $val
         end
       else
         # Sudo not detected. Just check the first argument of the command.
-        if [ (command -v $cmd[1]) ]
+        if type -q $cmd[1]
           abbr -ga $key $val
         end
       end
